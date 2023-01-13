@@ -1,0 +1,22 @@
+{
+  "name": "s2.reactonline",
+  "version": "1.0.0",
+  "description": "![alt logo](images/logoITA.png)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maricarmenmg/S2.reactonline.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maricarmenmg/S2.reactonline/issues"
+  },
+  "homepage": "https://github.com/maricarmenmg/S2.reactonline#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.3"
+  }
+}
