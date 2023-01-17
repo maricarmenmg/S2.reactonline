@@ -4,12 +4,15 @@
   "description": "![alt logo](images/logoITA.png)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "purgecss --css css/main.css --content index.html --output css/reducido.css"
   },
+
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/maricarmenmg/S2.reactonline.git"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {

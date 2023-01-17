@@ -1,0 +1,130 @@
+
+// Revisar el archivo node_modules\bootstrap\scss\_variables.scss
+$primary:#5265E1;
+$secondary: #FA5959;
+
+$font-family-sans-serif: 'Sofia Sans', sans-serif;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px
+) ;
+// scss-docs-end container-max-widths
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+body{
+	overflow-x: hidden;
+}
+
+
+
+.shape-bg {
+	position: absolute;
+	z-index: -1;
+	width: 400%;
+	height: 75%;
+	top: 30%;
+	left: 30%;
+}
+
+@media (max-width: 992px) {
+  .navbar-toggler {
+      position: relative;
+      width: 1em;
+      height: 2em;
+      padding: 0;
+      background-image: url(../images/icon-hamburger.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      border: none;
+      z-index: 6;
+
+      &:focus {
+          outline: none;
+          box-shadow: none;
+      }
+
+      &[aria-expanded=true] {
+          background-image: url(../images/icon-close.svg);
+          border: none;
+          box-shadow: none;
+      }
+  }
+
+  .navbar-collapse {
+      img {
+          margin-top: 2.2em;
+      }
+
+      &.collapse.show,
+      &.collapsing {
+          background: #235e;
+          position: fixed;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          z-index: 5;
+      }
+
+      & ul {
+          align-self: center;
+          margin: 2em 1.5em 0;
+      }
+
+      & li {
+          font-size: large;
+          font-weight: normal;
+          letter-spacing: 0.15em;
+          border-top: 1px solid #fff4;
+          display: grid;
+
+          a {
+              color: #fff;
+              margin: 0.6em;
+          }
+
+          button {
+              font-size: 1.05em;
+              letter-spacing: 0.15em;
+              margin: 1.3em -1.5em;
+              padding: 0.5em 0 !important;
+              background-color: #1131;
+              border: 2px solid #fff;
+          }
+      }
+              
+      .social {
+          padding-top: 9em;
+      }
+  }
+
+  .logo-bookmark {
+      width: 100%;
+
+      .flotante img {
+          margin: auto;
+
+      }
+  }
+
+  .texto-principal {
+      margin: auto;
+      float: none;
+      width: 90%;
+
+      .buttons-principal {
+          grid-template-columns: 1fr 1fr;
+      }
+
+      p {
+          font-size: 1em;
+      }
+
+  }
+
+}
