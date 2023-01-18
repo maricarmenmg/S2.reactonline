@@ -2,8 +2,15 @@
 // Revisar el archivo node_modules\bootstrap\scss\_variables.scss
 $primary:#5265E1;
 $secondary: #FA5959;
-
+$nav-link-color: #6c757d;
+$border-color: rgba(0, 0, 0, 0.125);
 $font-family-sans-serif: 'Sofia Sans', sans-serif;
+
+$accordion-button-active-color: #212529;
+$accordion-button-active-bg: #ffffff00;
+$accordion-button-focus-box-shadow: #9c141400;
+$accordion-icon-active-color: $secondary;
+
 
 $container-max-widths: (
   sm: 540px,
@@ -17,11 +24,20 @@ $container-max-widths: (
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 body{
-	overflow-x: hidden;
+overflow-x: hidden;
 }
 
+.btn-primary:hover {
+    color: #5265e1;
+    background-color: #fff;
+    border-color: #5265e1;
+}
 
-
+.btn-secondary:hover {
+    color: #fa5959 !important;
+    background-color: #fff;
+    border-color: #fa5959;
+}
 .shape-bg {
 	position: absolute;
 	z-index: -1;
@@ -31,8 +47,46 @@ body{
 	left: 30%;
 }
 
+/* Features */
+
+.title-hero{
+font-size: 1.0em;
+}
+
+.nav-item{
+    flex-grow: 1;
+}
+.nav-tabs{
+    border: none;
+    padding: 0;
+}
+.nav-tabs .nav-item{
+    border: none;
+    $font-family-sans-serif: 'Sofia Sans', sans-serif;
+    font-size: 1.1rem;
+    min-width: 12.5rem;
+    padding-top: 1rem;
+    text-align: center;
+}
+.nav-tabs .nav-item{
+    border-bottom: 1px solid $border-color;
+}
+.nav-tabs .nav-link{
+    border: none;
+    padding: 0 1rem 1rem 1rem;
+}
+.nav-tabs .nav-link.active{
+    border-bottom: 3px solid $secondary;
+}
+.nav-link:hover{
+    color: $secondary !important;
+}
+
+
+
+
 @media (max-width: 992px) {
-  .navbar-toggler {
+.navbar-toggler {
       position: relative;
       width: 1em;
       height: 2em;
@@ -106,25 +160,47 @@ body{
   .logo-bookmark {
       width: 100%;
 
-      .flotante img {
-          margin: auto;
-
-      }
   }
 
-  .texto-principal {
-      margin: auto;
-      float: none;
-      width: 90%;
+.texto-principal {
+  margin: auto;
+  float: none;
+  width: 90%;
 
-      .buttons-principal {
-          grid-template-columns: 1fr 1fr;
-      }
+    .buttons-principal {
+     grid-template-columns: 1fr 1fr;
+    }
 
-      p {
+    p {
           font-size: 1em;
       }
 
   }
 
+  .cards-bookmark{
+    background-color: aquamarine;
+    border:1px solid red;
+  }
+
+
+  .card-adapt {
+    & div:nth-child(1) div:nth-child(1) {
+        margin-top: 1rem;
+    }
+
+    & div:nth-child(2) div:nth-child(1) {
+        margin-top: 4rem;
+    }
+
+    & div:nth-child(3) div:nth-child(1) {
+        margin-top: 7rem;
+    }
 }
+}
+
+.card{
+  width: 15rem;
+}
+
+
+
