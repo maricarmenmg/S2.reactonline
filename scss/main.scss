@@ -1,15 +1,19 @@
-
 // Revisar el archivo node_modules\bootstrap\scss\_variables.scss
 $primary:#5265E1;
 $secondary: #FA5959;
+
 $nav-link-color: #6c757d;
 $border-color: rgba(0, 0, 0, 0.125);
 $font-family-sans-serif: 'Sofia Sans', sans-serif;
+
+
+/* --- Accordion--- */
 
 $accordion-button-active-color: #212529;
 $accordion-button-active-bg: #ffffff00;
 $accordion-button-focus-box-shadow: #9c141400;
 $accordion-icon-active-color: $secondary;
+
 
 
 $container-max-widths: (
@@ -19,12 +23,25 @@ $container-max-widths: (
   xl: 1140px,
   xxl: 1320px
 ) ;
-// scss-docs-end container-max-widths
+
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 
+
 body{
 overflow-x: hidden;
+}
+
+/*--------------------------------------------------------------
+# Sections
+--------------------------------------------------------------*/
+
+section {
+    padding: 45px 0;
+}
+
+.bg-dark {
+ background-color: #252b46 !important;
 }
 
 .btn-primary:hover {
@@ -38,28 +55,72 @@ overflow-x: hidden;
     background-color: #fff;
     border-color: #fa5959;
 }
-.shape-bg {
-	position: absolute;
-	z-index: -1;
-	width: 400%;
-	height: 75%;
-	top: 30%;
-	left: 30%;
+
+.btn-light:hover {
+    color: #252b46;
+    background-color: #fff;
+    border-color: #252b46;
 }
 
-/* Features */
+
+.cto:hover {
+    border: 2px solid hsl(229deg, 31%, 21%);
+    background-color: #fff;
+}
+
+.shape-hero ::after {
+    content: "";
+    position: absolute;
+    background-color: #5368df;
+    height: 340px;
+    width: 820px;
+    bottom: 28px;
+    right: -468px;
+    z-index: -1;
+    border-bottom-left-radius: 204px;
+}
+
+.shape ::after {
+    content: "";
+    position: absolute;
+    background-color: #5368df;
+    height: 340px;
+    width: 820px;
+    bottom:-510px;
+    left: 0px;
+    z-index: -1;
+    border-bottom-right-radius: 204px;
+}
+
+
+/*--------------------------------------------------------------
+# Sections Features 
+--------------------------------------------------------------*/
+
+#footer-section{
+    padding:15% ;
+}
+    
 
 .title-hero{
 font-size: 1.0em;
 }
 
-.nav-item{
-    flex-grow: 1;
+.img-fluid-features{
+    max-width: 75%;
+    height: auto;
 }
+
 .nav-tabs{
     border: none;
     padding: 0;
 }
+
+.nav-item{
+    flex-grow: 1;
+}
+
+
 .nav-tabs .nav-item{
     border: none;
     $font-family-sans-serif: 'Sofia Sans', sans-serif;
@@ -81,126 +142,126 @@ font-size: 1.0em;
 .nav-link:hover{
     color: $secondary !important;
 }
-
-
-
-
-@media (max-width: 992px) {
-.navbar-toggler {
-      position: relative;
-      width: 1em;
-      height: 2em;
-      padding: 0;
-      background-image: url(../images/icon-hamburger.svg);
-      background-repeat: no-repeat;
-      background-position: center;
-      border: none;
-      z-index: 6;
-
-      &:focus {
-          outline: none;
-          box-shadow: none;
-      }
-
-      &[aria-expanded=true] {
-          background-image: url(../images/icon-close.svg);
-          border: none;
-          box-shadow: none;
-      }
-  }
-
-  .navbar-collapse {
-      img {
-          margin-top: 2.2em;
-      }
-
-      &.collapse.show,
-      &.collapsing {
-          background: #235e;
-          position: fixed;
-          top: 0;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          z-index: 5;
-      }
-
-      & ul {
-          align-self: center;
-          margin: 2em 1.5em 0;
-      }
-
-      & li {
-          font-size: large;
-          font-weight: normal;
-          letter-spacing: 0.15em;
-          border-top: 1px solid #fff4;
-          display: grid;
-
-          a {
-              color: #fff;
-              margin: 0.6em;
-          }
-
-          button {
-              font-size: 1.05em;
-              letter-spacing: 0.15em;
-              margin: 1.3em -1.5em;
-              padding: 0.5em 0 !important;
-              background-color: #1131;
-              border: 2px solid #fff;
-          }
-      }
-              
-      .social {
-          padding-top: 9em;
-      }
-  }
-
-  .logo-bookmark {
-      width: 100%;
-
-  }
-
-.texto-principal {
-  margin: auto;
-  float: none;
-  width: 90%;
-
-    .buttons-principal {
-     grid-template-columns: 1fr 1fr;
-    }
-
-    p {
-          font-size: 1em;
-      }
-
-  }
-
-  .cards-bookmark{
-    background-color: aquamarine;
-    border:1px solid red;
-  }
-
-
-  .card-adapt {
-    & div:nth-child(1) div:nth-child(1) {
-        margin-top: 1rem;
-    }
-
-    & div:nth-child(2) div:nth-child(1) {
-        margin-top: 4rem;
-    }
-
-    & div:nth-child(3) div:nth-child(1) {
-        margin-top: 7rem;
-    }
+.nav-item:hover{
+    color: $secondary !important;
 }
-}
+
 
 .card{
-  width: 15rem;
+    width: 15rem;
 }
 
+@media (max-width: 992px) {
+    .navbar-toggler {
+        position: relative;
+        width: 1em;
+        height: 2em;
+        padding: 0;
+        background-image: url(../images/icon-hamburger.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        border: none;
+        z-index: 6;
+    
+            &:focus {
+                outline: none;
+                box-shadow: none;
+            }
+    
+            &[aria-expanded=true] {
+                background-image: url(../images/icon-close.svg);
+                border: none;
+                box-shadow: none;
+            }
+        }
+    
+    .navbar-collapse {
+          img {
+                margin-top: 2.2em;
+            }
+    
+            &.collapse.show,
+            &.collapsing {
+                background: #235e;
+                position: fixed;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                z-index: 5;
+            }
+    
+            & ul {
+                align-self: center;
+                margin: 2em 1.5em 0;
+            }
+    
+            & li {
+                font-size: 1.00m;
+                font-weight: 400;
+                letter-spacing: 0.15em;
+                border-top: 1px solid #ffffff56;
+                display: grid;
+    
+                a {
+                    color: #fff;
+                    margin: 0.6em;
+                }
+    
+                button {
+                    font-size: 1.05em;
+                    letter-spacing: 0.15em;
+                    margin: 1.3em -1.5em;
+                    padding: 0.5em 0 !important;
+                    background-color: #1131;
+                    border: 2px solid #fff;
+                }
+            }
+                    
+            .icon-social {
+                margin-top: 9em;
+            }
+        }
+    
+    .image-hero{
+        margin-top: -20% !important;
+    }
+    .cta-hero{
+        margin-top: 15% !important;
+    }     
+    .shape-hero ::after {
+        content: "";
+        position: absolute;
+        background-color: #5368df;
+        height: 340px;
+        width: 820px;
+        bottom: -78px;
+        right: -468px;
+        z-index: -1;
+        border-bottom-left-radius: 204px;
+       }
+       
+ 
+.title-features{
+  margin-top: 20px;
+}
 
+.img-fluid-features {
+    max-width: 100%;
+    height: auto;
+}
 
+.shape ::after {
+    content: "";
+    position: absolute;
+    background-color: #5368df;
+    height: 340px;
+    width: 820px;
+    bottom:-510px;
+    left: 0px;
+    z-index: -1;
+    border-bottom-right-radius: 204px;
+}
+
+}
+       
