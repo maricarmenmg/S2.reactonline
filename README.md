@@ -7,7 +7,7 @@
 ![alt preview](screenshot.jpg)   
 
 
- ####  Objetivos específicos.
+ ####  ● Objetivos específicos.
 
 - Aprender a utilizar componentes de Bootstrap.
 - Entender la documentación de librerías UI como Bootstrap.
@@ -19,3 +19,4 @@
 - Ajustar la maquetación al tamaño de la pantalla.
 - Trabajar con ventanas modales.
 
+#### ● [www.react-sprint2]( https://react-sprint2.netlify.app/)
