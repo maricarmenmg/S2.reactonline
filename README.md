@@ -16,6 +16,6 @@
 - Instalar FrameWork Bootstrap.
 - Diseño responsive.
 - Maquetación con el sistema 12 columnas de Bootstrap.
-- justar la maquetación al tamaño de la pantalla.
+- Ajustar la maquetación al tamaño de la pantalla.
 - Trabajar con ventanas modales.
 
