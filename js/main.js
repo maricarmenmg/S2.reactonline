@@ -1,6 +1,5 @@
 
 import "../node_modules/bootstrap/dist/js/bootstrap.js";
-<link href="https://react-sprint2.netlify.app/node_modules/bootstrap/dist/js/bootstrap.js”>   
 
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 (function () {
